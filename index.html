@@ -12,36 +12,65 @@
 <div id="clock"><div id="tanggal"></div><div id="waktu"></div></div>
 
 <div class="no-click pb-20">
-<header class="text-center p-6 border-b border-blue-500/30">
-<h1 class="text-3xl md:text-4xl font-bold glow tracking-wide">💠 DATA WELPART CWU</h1>
-<p class="text-blue-300 text-sm mt-1">Data realtime tersinkron dengan Admin Keuangan</p>
-</header>
+  <header class="text-center p-6 border-b border-blue-500/30">
+    <h1 class="text-3xl md:text-4xl font-bold glow tracking-wide">💠 DATA WELPART CWU</h1>
+    <p class="text-blue-300 text-sm mt-1">Data realtime tersinkron dengan Admin Keuangan</p>
+  </header>
 
-<main class="flex-grow p-6 space-y-10">
-<div class="card rounded-2xl p-5 fade-in">
-<h2 class="text-2xl text-center font-semibold text-blue-400 mb-4">🍽️ Partisipasi + Makan</h2>
-<div class="overflow-x-auto">
-<table class="w-full border-collapse text-sm md:text-base">
-<thead class="bg-blue-700/60 text-white">
-<tr><th class="p-2 border border-blue-400/40">Nama</th><th class="p-2 border border-blue-400/40">Prodi-Akt</th><th class="p-2 border border-blue-400/40">Divisi</th><th class="p-2 border border-blue-400/40">Nominal</th><th class="p-2 border border-blue-400/40">Status</th></tr>
-</thead>
-<tbody id="tabelUser" class="text-gray-100"></tbody>
-</table>
-</div>
-</div>
+  <main class="flex-grow p-6 space-y-10">
+    
+    <!-- Filter + Search -->
+    <div class="flex flex-col md:flex-row justify-between items-center mb-4 gap-3">
+      <input id="searchInput" type="text" placeholder="Cari nama..." class="px-3 py-1 rounded w-full md:w-1/2 bg-blue-900 text-white focus:outline-none focus:ring-2 focus:ring-blue-500">
+      <select id="divisiFilter" class="px-3 py-1 rounded bg-blue-900 text-white focus:outline-none focus:ring-2 focus:ring-blue-500">
+        <option value="all">Semua Divisi</option>
+        <option value="Demis">Demis</option>
+        <option value="Medinfo">Medinfo</option>
+        <option value="Inbis">Inbis</option>
+        <option value="Networking">Networking</option>
+        <option value="Kewirausahaan">Kewirausahaan</option>
+      </select>
+    </div>
 
-<div class="card rounded-2xl p-5 fade-in" style="animation-delay:0.3s">
-<h2 class="text-2xl text-center font-semibold text-blue-400 mb-4">💎 Full (Partisipasi + Makan + Kas)</h2>
-<div class="overflow-x-auto">
-<table class="w-full border-collapse text-sm md:text-base">
-<thead class="bg-blue-700/60 text-white">
-<tr><th class="p-2 border border-blue-400/40">Nama</th><th class="p-2 border border-blue-400/40">Prodi-Akt</th><th class="p-2 border border-blue-400/40">Divisi</th><th class="p-2 border border-blue-400/40">Nominal</th><th class="p-2 border border-blue-400/40">Status</th></tr>
-</thead>
-<tbody id="tabelUser2" class="text-gray-100"></tbody>
-</table>
-</div>
-</div>
-</main>
+    <!-- Partisipasi + Makan -->
+    <div class="card rounded-2xl p-5 fade-in">
+      <h2 class="text-2xl text-center font-semibold text-blue-400 mb-4">🍽️ Partisipasi + Makan</h2>
+      <div class="overflow-x-auto">
+        <table class="w-full border-collapse text-sm md:text-base">
+          <thead class="bg-blue-700/60 text-white">
+            <tr>
+              <th class="p-2 border border-blue-400/40">Nama</th>
+              <th class="p-2 border border-blue-400/40">Prodi-Akt</th>
+              <th class="p-2 border border-blue-400/40">Divisi</th>
+              <th class="p-2 border border-blue-400/40">Nominal</th>
+              <th class="p-2 border border-blue-400/40">Status</th>
+            </tr>
+          </thead>
+          <tbody id="tabelUser" class="text-gray-100"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Full -->
+    <div class="card rounded-2xl p-5 fade-in" style="animation-delay:0.3s">
+      <h2 class="text-2xl text-center font-semibold text-blue-400 mb-4">💎 Full (Partisipasi + Makan + Kas)</h2>
+      <div class="overflow-x-auto">
+        <table class="w-full border-collapse text-sm md:text-base">
+          <thead class="bg-blue-700/60 text-white">
+            <tr>
+              <th class="p-2 border border-blue-400/40">Nama</th>
+              <th class="p-2 border border-blue-400/40">Prodi-Akt</th>
+              <th class="p-2 border border-blue-400/40">Divisi</th>
+              <th class="p-2 border border-blue-400/40">Nominal</th>
+              <th class="p-2 border border-blue-400/40">Status</th>
+            </tr>
+          </thead>
+          <tbody id="tabelUser2" class="text-gray-100"></tbody>
+        </table>
+      </div>
+    </div>
+
+  </main>
 </div>
 
 <footer>© 2025 CWU Team — <span class="text-blue-400">Data Real-time</span> 🔄</footer>

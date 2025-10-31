@@ -1,69 +1,51 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Data Partisipan CWU</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="style.css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DATA WELPART CWU</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="flex flex-col min-h-screen">
-  <div id="clock">
-    <div id="tanggal"></div>
-    <div id="waktu"></div>
-  </div>
 
-  <div class="no-click pb-20">
-    <header class="text-center p-6 border-b border-blue-500/30">
-      <h1 class="text-3xl md:text-4xl font-bold glow tracking-wide">💠 DATA WELPART CWU</h1>
-      <p class="text-blue-300 text-sm mt-1">Data realtime tersinkron dengan Admin Keuangan</p>
-    </header>
+<div id="clock"><div id="tanggal"></div><div id="waktu"></div></div>
 
-    <main class="flex-grow p-6 space-y-10">
-      <!-- Section 1 -->
-      <div class="card rounded-2xl p-5 fade-in">
-        <h2 class="text-2xl text-center font-semibold text-blue-400 mb-4">🍽️ Partisipasi + Makan</h2>
-        <div class="overflow-x-auto">
-          <table class="w-full border-collapse text-sm md:text-base">
-            <thead class="bg-blue-700/60 text-white">
-              <tr>
-                <th class="p-2 border border-blue-400/40">Nama</th>
-                <th class="p-2 border border-blue-400/40">Prodi-Akt</th>
-                <th class="p-2 border border-blue-400/40">Divisi</th>
-                <th class="p-2 border border-blue-400/40">Nominal</th>
-                <th class="p-2 border border-blue-400/40">Status</th>
-              </tr>
-            </thead>
-            <tbody id="tabelUser" class="text-gray-100"></tbody>
-          </table>
-        </div>
-      </div>
+<div class="no-click pb-20">
+<header class="text-center p-6 border-b border-blue-500/30">
+<h1 class="text-3xl md:text-4xl font-bold glow tracking-wide">💠 DATA WELPART CWU</h1>
+<p class="text-blue-300 text-sm mt-1">Data realtime tersinkron dengan Admin Keuangan</p>
+</header>
 
-      <!-- Section 2 -->
-      <div class="card rounded-2xl p-5 fade-in" style="animation-delay:0.3s">
-        <h2 class="text-2xl text-center font-semibold text-blue-400 mb-4">💎 Full (Partisipasi + Makan + Kas)</h2>
-        <div class="overflow-x-auto">
-          <table class="w-full border-collapse text-sm md:text-base">
-            <thead class="bg-blue-700/60 text-white">
-              <tr>
-                <th class="p-2 border border-blue-400/40">Nama</th>
-                <th class="p-2 border border-blue-400/40">Prodi-Akt</th>
-                <th class="p-2 border border-blue-400/40">Divisi</th>
-                <th class="p-2 border border-blue-400/40">Nominal</th>
-                <th class="p-2 border border-blue-400/40">Status</th>
-              </tr>
-            </thead>
-            <tbody id="tabelUser2" class="text-gray-100"></tbody>
-          </table>
-        </div>
-      </div>
-    </main>
-  </div>
+<main class="flex-grow p-6 space-y-10">
+<div class="card rounded-2xl p-5 fade-in">
+<h2 class="text-2xl text-center font-semibold text-blue-400 mb-4">🍽️ Partisipasi + Makan</h2>
+<div class="overflow-x-auto">
+<table class="w-full border-collapse text-sm md:text-base">
+<thead class="bg-blue-700/60 text-white">
+<tr><th class="p-2 border border-blue-400/40">Nama</th><th class="p-2 border border-blue-400/40">Prodi-Akt</th><th class="p-2 border border-blue-400/40">Divisi</th><th class="p-2 border border-blue-400/40">Nominal</th><th class="p-2 border border-blue-400/40">Status</th></tr>
+</thead>
+<tbody id="tabelUser" class="text-gray-100"></tbody>
+</table>
+</div>
+</div>
 
-  <footer>
-    © 2025 CWU Team — <span class="text-blue-400">Data Real-time</span> 🔄
-  </footer>
+<div class="card rounded-2xl p-5 fade-in" style="animation-delay:0.3s">
+<h2 class="text-2xl text-center font-semibold text-blue-400 mb-4">💎 Full (Partisipasi + Makan + Kas)</h2>
+<div class="overflow-x-auto">
+<table class="w-full border-collapse text-sm md:text-base">
+<thead class="bg-blue-700/60 text-white">
+<tr><th class="p-2 border border-blue-400/40">Nama</th><th class="p-2 border border-blue-400/40">Prodi-Akt</th><th class="p-2 border border-blue-400/40">Divisi</th><th class="p-2 border border-blue-400/40">Nominal</th><th class="p-2 border border-blue-400/40">Status</th></tr>
+</thead>
+<tbody id="tabelUser2" class="text-gray-100"></tbody>
+</table>
+</div>
+</div>
+</main>
+</div>
 
-  <script type="module" src="script.js"></script>
+<footer>© 2025 CWU Team — <span class="text-blue-400">Data Real-time</span> 🔄</footer>
+
+<script src="script.js" type="module"></script>
 </body>
 </html>

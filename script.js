@@ -40,7 +40,7 @@ onValue(dbRef, snapshot => {
         <td class="p-2 border border-blue-400/40 text-center">Rp ${o.nominal?.toLocaleString() || "0"}</td>
         <td class="p-2 border border-blue-400/40 text-center">
           <span class="px-3 py-1 rounded-full text-xs font-bold ${o.status==="Lunas"?"status-lunas":"status-belum"}">
-            ${o.status || "Belum"}
+            ${o.status === "Lunas" ? "Lunas" : "Belum"}
           </span>
         </td>
       </tr>`;

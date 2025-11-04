@@ -13,7 +13,7 @@ function createTableRow(data) {
   const row = document.createElement("tr");
   const welpartClass = data.welpart >= minWelpart ? "bg-green-min" : "bg-red-min";
   const kasClass = data.kas >= minKas ? "bg-green-min" : "bg-red-min";
-  const statusText = data.status === "lunas" ? "PAID" : "NO PAID";
+  const statusText = data.status === "lunas" ? "PAID" : "UNPAID";
   const statusBadgeClass = data.status === "lunas" ? "status-lunas" : "status-tidak";
 
   row.innerHTML = `
@@ -100,3 +100,4 @@ async function loadFinalTable() {
 
 database.ref("anggota").on("value", () => loadFinalTable());
 database.ref("pesanan").on("value", () => loadFinalTable());
+

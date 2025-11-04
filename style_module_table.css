@@ -1,0 +1,66 @@
+#financial_cwu_table { 
+    width: 100%; 
+    border-collapse: collapse; 
+    margin-top: 20px; 
+    border-radius: 8px; 
+    overflow: hidden;
+}
+#financial_cwu_table th, #financial_cwu_table td { 
+    border: none;
+    padding: 15px 10px; 
+    text-align: left; 
+    font-size: 0.95em; 
+}
+#financial_cwu_table th { 
+    background-color: #334155; 
+    color: var(--color-text-light); 
+    font-weight: 700; 
+    text-transform: uppercase;
+    border-bottom: 2px solid var(--color-accent);
+}
+#financial_cwu_table tr:nth-child(even) td {
+    background-color: #2a385b; /* Slightly different row color for contrast */
+}
+
+
+.bg-green-min { background-color: rgba(16, 185, 129, 0.2); color: var(--color-success); font-weight: 500; border-radius: 4px; padding: 4px 8px; }
+.bg-red-min { background-color: rgba(239, 68, 68, 0.2); color: var(--color-danger); font-weight: 500; border-radius: 4px; padding: 4px 8px; }
+
+.status-lunas { background-color: var(--color-success); color: white; padding: 4px 8px; border-radius: 4px; font-weight: 600; font-size: 0.9em; } 
+.status-tidak { background-color: var(--color-danger); color: white; padding: 4px 8px; border-radius: 4px; font-weight: 600; font-size: 0.9em; } 
+
+
+@media screen and (max-width: 768px) {
+    .controls-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .search-container, .filter-container { 
+        max-width: 100%;
+    }
+    
+
+    #financial_cwu_table, #financial_cwu_table thead, #financial_cwu_table tbody, #financial_cwu_table th, #financial_cwu_table td, #financial_cwu_table tr { display: block; }
+    #financial_cwu_table thead tr { position: absolute; top: -9999px; left: -9999px; }
+    #financial_cwu_table tr { border: 1px solid #334155; margin-bottom: 15px; border-radius: 8px; }
+    #financial_cwu_table td {
+        border: none;
+        border-bottom: 1px solid #334155;
+        position: relative;
+        padding-left: 55%;
+        text-align: right;
+        font-size: 1em;
+    }
+    #financial_cwu_table td:before {
+        position: absolute;
+        top: 0;
+        left: 10px;
+        width: 40%;
+        padding-right: 10px;
+        white-space: nowrap;
+        content: attr(data-label);
+        text-align: left;
+        font-weight: 500;
+        color: var(--color-text-secondary);
+    }
+}

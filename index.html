@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CWU Gen 2 - Data Finansial Live Feed</title>
+    
+    <link rel="stylesheet" href="style_base.css">
+    <link rel="stylesheet" href="style_module_table.css">
+    
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <h1>CWU FINANCIAL LIVE MONITOR</h1>
+        <p>Data Kontribusi dan Status Anggota Generasi 2</p>
+    </header>
+
+    <div class="container">
+        <section class="table-section">
+            <h2>Data Anggota & Keuangan CWU</h2>
+            
+            <div class="controls-container">
+                <div class="search-container">
+                    <label for="cwu-s-input">Cari Nama / Divisi / Prodi</label>
+                    <input type="text" id="cwu-s-input" onkeyup="cwuSearchData()" placeholder="Ketik kata kunci pencarian...">
+                </div>
+
+                <div class="filter-container">
+                    <label for="cwu-d-filter">Filter Berdasarkan Divisi</label>
+                    <select id="cwu-d-filter" onchange="cwuFilterData(this.value)">
+                        <option value="">-- Tampilkan Semua Divisi --</option>
+                        <option value="Bpi">BPI</option>
+                        <option value="Inbis">INBIS</option>
+                        <option value="Network">NETWORK</option>
+                        <option value="Kwu">KWU</option>
+                        <option value="Medinfo">MEDINFO</option>
+                        <option value="Demis">DEMIS</option>
+                    </select>
+                </div>
+            </div>
+
+            <table id="financial_cwu_table">
+                <thead>
+                    <tr>
+                        <th>No.</th>
+                        <th>Nama Anggota</th>
+                        <th>Divisi</th>
+                        <th>Prodi/Akt</th>
+                        <th>TAGIHAN KONSUMSI</th>
+                        <th>Welpart</th>
+                        <th>Kas</th>
+                        <th>TOTAL TAGIHAN</th> 
+                        <th>Status Pembayaran</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td colspan="9" style="text-align: center; color: var(--color-accent);">Memuat data secara realtime dari server...</td></tr>
+                </tbody>
+            </table>
+        </section>
+    </div>
+
+<script src="script_config_until.js"></script>
+<script src="script_dom_renderer.js"></script>
+<script src="script_filter_loader.js"></script>
+</body>
+</html>
